@@ -43,7 +43,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
-
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <meta charset="UTF-8">
     <title>Two GIFs Example</title>
     <style>
@@ -204,11 +204,9 @@
             <h2 class="subtitle has-text-centered">
               <small><b>Illustration of adpative refinement.</b>
                 To address the issue of failing to generate paths due to a breadth-first search, such as in a bottleneck-maze task, BEAG employs adaptive grid refinement:
-                <ol>
-                  <li>Identifying unattainable subgoals until paths cannot be generated.</li>
-                  <li>Performing dense refinement around one of the unattainable nodes.</li>
-                  <li>Repeating step 1 and 2 until a successful path is found.</li>
-                </ol>
+                (1) Identifying unattainable subgoals until paths cannot be generated.
+                (2) Performing dense refinement around one of the unattainable nodes.
+                (3) Repeating step 1 and 2 until a successful path is found.
               </small>
             </h2>
           </div>
@@ -227,10 +225,8 @@
             <h2 class="subtitle has-text-centered">
               <small><b>Illustration of theoritical analysis.</b> 
                 According to our analysis:
-                <ol>
-                  <li>BEAG can always generate a possible path if there exists an 𝜖-path.</li>
-                  <li>The length of the grid path is at most \( \left\lceil \frac{l}{\delta_0} \right\rceil + 1\) \delta_0 \sqrt{K}, where 𝑙 is the length of the 𝜖-path.</li>
-                </ol>
+                (a) BEAG can always generate a possible path if there exists an 𝜖-path.
+                (b) The length of the grid path is at most \( \left\lceil \frac{l}{\delta_0} \right\rceil + 1\) \delta_0 \sqrt{K}, where 𝑙 is the length of the 𝜖-path.
               </small>
             </h2>
           </div>
