@@ -203,10 +203,12 @@
             <img src="static/images/refinement.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-centered">
               <small><b>Illustration of adpative refinement.</b>
-                To address the issue of failing to generate paths due to a breadth-first search, such as in a bottleneck-maze task, BEAG employs adaptive grid refinement.
-                (1) Identifying unattainable subgoals until paths cannot be generated.
-                (2) Performing dense refinement around one of the unattainable nodes.
-                (3) Repeating step 1 and 2 until a successful path is found.
+                To address the issue of failing to generate paths due to a breadth-first search, such as in a bottleneck-maze task, BEAG employs adaptive grid refinement:
+                <ol>
+                  <li>Identifying unattainable subgoals until paths cannot be generated.</li>
+                  <li>Performing dense refinement around one of the unattainable nodes.</li>
+                  <li>Repeating step 1 and 2 until a successful path is found.</li>
+                </ol>
               </small>
             </h2>
           </div>
@@ -223,10 +225,12 @@
           <div class="hero-body">
             <img src="static/images/analysis.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-centered">
-              <small><b>Illustration of theoritical analysis</b> 
-                According to our analysis,
-                (1) BEAG can always generate a possible path if there exists an 𝜖-path.
-                (2) The length of the grid path is at most (⌈𝑙/𝛿_0 ⌉+1) 𝛿_0 √𝐾, where 𝑙 is the length of the 𝜖-path.
+              <small><b>Illustration of theoritical analysis.</b> 
+                According to our analysis:
+                <ol>
+                  <li>BEAG can always generate a possible path if there exists an 𝜖-path.</li>
+                  <li>The length of the grid path is at most \( \left\lceil \frac{l}{\delta_0} \right\rceil + 1\) \delta_0 \sqrt{K}, where 𝑙 is the length of the 𝜖-path.</li>
+                </ol>
               </small>
             </h2>
           </div>
