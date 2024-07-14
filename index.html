@@ -194,12 +194,20 @@
           <div class="hero-body">
             <img src="static/images/method.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-centered">
-              <small><b>AntMaze and Reacher3D environments.</b> We evaluate graph-based RL methods in the set of MuJoCo environments depicted above, in challenging setups with sparse rewards over a long horizon. We note that the goal space for the AntMaze and the Reacher3D utilized 2-dimensional space and 3-dimensional space, respectively.</small>
+              <small><b>Illustration of the BEAG.</b> 
+                BEAG employs a grid covering the entire map instead of relying on graphs generated from the replay buffer which, may include unexplored or even impossible subgoals.
+                BEAG follows paths generated from the graph and explores promising subgoals by removing edges connected to subgoals that have been experienced repeated failures.
+              </small>
             </h2>
             
             <img src="static/images/refinement.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-centered">
-              <small><b>Success rates in various environments (fixed goal).</b> We report the average success rate as a solid line and the standard deviation as a shaded region. Both BEAG and all other baselines are trained with a fixed initial state and goal setting. We note that certain baselines may not be visible in specific environments due to overlapping values, especially at zero success rates.</small>
+              <small><b>Illustration of adpative refinement.</b>
+                To address the issue of failing to generate paths due to a breadth-first search, such as in a bottleneck-maze task, BEAG employs adaptive grid refinement.
+                (1) Identifying unattainable subgoals until paths cannot be generated.
+                (2) Performing dense refinement around one of the unattainable nodes.
+                (3) Repeating step 1 and 2 until a successful path is found.
+              </small>
             </h2>
           </div>
       </div>
@@ -215,7 +223,11 @@
           <div class="hero-body">
             <img src="static/images/analysis.png" alt="MY ALT TEXT"/>
             <h2 class="subtitle has-text-centered">
-              <small><b>AntMaze and Reacher3D environments.</b> We evaluate graph-based RL methods in the set of MuJoCo environments depicted above, in challenging setups with sparse rewards over a long horizon. We note that the goal space for the AntMaze and the Reacher3D utilized 2-dimensional space and 3-dimensional space, respectively.</small>
+              <small><b>AntMaze and Reacher3D environments.</b> 
+                According to our analysis, 
+                1.  BEAG can always generate a possible path if there exists an 𝜖-path.
+                2.  The length of the grid path is at most (⌈𝑙/𝛿_0 ⌉+1) 𝛿_0 √𝐾, where 𝑙 is the length of the 𝜖-path.                
+              </small>
             </h2>
           </div>
       </div>
